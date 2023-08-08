@@ -14,8 +14,6 @@ async function getData() {
 export default async function Home() {
   const { results, next } = await getData()
 
-  console.log(results)
-
   return (
     <main className='app'>
       {results.map(({ url, name }: { url: string; name: string }) => (

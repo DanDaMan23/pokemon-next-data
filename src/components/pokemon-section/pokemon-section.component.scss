@@ -1,0 +1,8 @@
+.pokemon-section {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+
+  div {
+    padding: 0.5rem;
+  }
+}

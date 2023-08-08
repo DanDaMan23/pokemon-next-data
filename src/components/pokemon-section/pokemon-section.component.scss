@@ -1,8 +1,37 @@
+@use "../../styles/color-variables.scss" as *;
+
 .pokemon-section {
   display: grid;
   grid-template-columns: 1fr 5fr;
 
+  background: $pokemon-blue;
+  border-radius: 10px;
+  margin: 0.5rem 0;
+
+  color: #ffffff;
+
   div {
-    padding: 0.5rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .stats-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .pokemon-name {
+      text-transform: capitalize;
+    }
+
+    .pokemon-types {
+      list-style: none;
+      padding: 0;
+      display: flex;
+
+      .type {
+        margin: 0.2rem;
+        padding: 0.3rem;
+      }
+    }
   }
 }

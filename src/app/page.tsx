@@ -1,8 +1,5 @@
-import PokemonCard from "@/components/pokemon-card/pokemon-card.component"
-
-import "./app.scss"
-import IPokemon from "@/interfaces/pokemon-interface"
 import PokemonSection from "./pokemon-section/pokemon-section"
+import "./app.scss"
 
 async function getData() {
   const res = await fetch("https://pokeapi.co/api/v2/pokemon")

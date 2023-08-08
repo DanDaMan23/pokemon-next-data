@@ -19,6 +19,7 @@ export default function PokemonCard({
   return (
     <div className={`pokemon-section ${className}`} style={style}>
       <div className='image-section'>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={imageLink} alt={name} />
       </div>
       <div className='stats-section'>

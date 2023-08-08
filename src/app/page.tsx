@@ -2,6 +2,7 @@ import PokemonCard from "@/components/pokemon-card/pokemon-card.component"
 
 import "./app.scss"
 import IPokemon from "@/interfaces/pokemon-interface"
+import PokemonSection from "./pokemon-section/pokemon-section"
 
 async function getData() {
   const res = await fetch("https://pokeapi.co/api/v2/pokemon")
@@ -20,22 +21,9 @@ export default async function Home() {
 
   return (
     <main className='app'>
-      {results.map((pokemon: IPokemon) => (
-        <PokemonCard
-          key={pokemon.name}
-          id={1}
-          name={pokemon.name}
-          types={["grass", "poison"]}
-          imageLink='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png'
-        />
+      {results.map(({ url, name }: { url: string; name: string }) => (
+        <PokemonSection key={name} link={url} name={name} />
       ))}
-
-      {/* <PokemonCard
-        id={4}
-        name='charmander'
-        types={["fire", "poison"]}
-        imageLink='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png'
-      /> */}
     </main>
   )
 }

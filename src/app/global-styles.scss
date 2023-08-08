@@ -1,0 +1,21 @@
+$pokemon-red: #ff0000;
+$pokemon-dark-red: #cc0000;
+$pokemon-blue: #3b4cca;
+$pokemon-yellow: #ffde00;
+$pokemon-gold: #b3a125;
+
+* {
+  margin: 0;
+}
+
+body {
+  .header {
+    background-color: $pokemon-red;
+    text-align: center;
+    h1 {
+      -webkit-text-stroke: 0.15rem $pokemon-blue;
+      color: $pokemon-yellow;
+      font-size: 3rem;
+    }
+  }
+}

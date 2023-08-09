@@ -19,19 +19,25 @@ export default async function Page({ params: { slug } }: PageProps) {
     `https://pokeapi.co/api/v2/pokemon/${slug}`,
     `${slug} does not exists`
   )
-
-  console.log(types)
-  console.log(sprites.front_default)
-  //   console.log(abilities)
+  console.log(abilities)
 
   return (
     <main className='pokemon-info-page'>
       <img src={sprites.front_default} alt={name} />
-      <h1>{name}</h1>
-      <ul>
+      <h1 className="pokemon-name">{name}</h1>
+      <ul className='pokemon-type'>
         {types.map(({ type: { name } }: { type: { name: string } }) => (
           <li key={name}>{name}</li>
         ))}
+      </ul>
+
+      <h3>Abilities</h3>
+      <ul className='pokemon-abilities'>
+        {abilities.map(
+          ({ ability: { name } }: { ability: { name: string } }) => (
+            <li key={name}>{name}</li>
+          )
+        )}
       </ul>
     </main>
   )

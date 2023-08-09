@@ -1,5 +1,3 @@
-
-
 interface PageProps {
   params: { slug: string }
 }
@@ -15,12 +13,14 @@ async function getData(link: string, errorMessage: string) {
 }
 
 export default async function Page({ params: { slug } }: PageProps) {
-  const res = await getData(
+  const { name, types, sprites, abilities } = await getData(
     `https://pokeapi.co/api/v2/pokemon/${slug}`,
     `${slug} does not exists`
   )
 
-  console.log(res)
+  //   console.log(types)
+  //   console.log(sprites)
+  //   console.log(abilities)
 
   return <main>{slug}</main>
 }

@@ -1,3 +1,5 @@
+import "./pokemon-info-page.scss"
+
 interface PageProps {
   params: { slug: string }
 }
@@ -18,9 +20,19 @@ export default async function Page({ params: { slug } }: PageProps) {
     `${slug} does not exists`
   )
 
-  //   console.log(types)
-  //   console.log(sprites)
+  console.log(types)
+  console.log(sprites.front_default)
   //   console.log(abilities)
 
-  return <main>{slug}</main>
+  return (
+    <main className='pokemon-info-page'>
+      <img src={sprites.front_default} alt={name} />
+      <h1>{name}</h1>
+      <ul>
+        {types.map(({ type: { name } }: { type: { name: string } }) => (
+          <li key={name}>{name}</li>
+        ))}
+      </ul>
+    </main>
+  )
 }

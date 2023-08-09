@@ -1,0 +1,15 @@
+.pokemon-info-page {
+  text-align: center;
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+
+    li {
+      margin: 1rem;
+    }
+  }
+}

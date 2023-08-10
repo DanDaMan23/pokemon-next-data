@@ -23,22 +23,26 @@ export default async function Page({ params: { slug } }: PageProps) {
 
   return (
     <main className='pokemon-info-page'>
-      <img src={sprites.front_default} alt={name} />
-      <h1 className="pokemon-name">{name}</h1>
-      <ul className='pokemon-type'>
-        {types.map(({ type: { name } }: { type: { name: string } }) => (
-          <li key={name}>{name}</li>
-        ))}
-      </ul>
+      <div className='container'>
+        <img src={sprites.front_default} alt={name} />
+        <h1 className='pokemon-name'>{name}</h1>
 
-      <h3>Abilities</h3>
-      <ul className='pokemon-abilities'>
-        {abilities.map(
-          ({ ability: { name } }: { ability: { name: string } }) => (
+        <h3>Types</h3>
+        <ul className='pokemon-types'>
+          {types.map(({ type: { name } }: { type: { name: string } }) => (
             <li key={name}>{name}</li>
-          )
-        )}
-      </ul>
+          ))}
+        </ul>
+
+        <h3>Abilities</h3>
+        <ul className='pokemon-abilities'>
+          {abilities.map(
+            ({ ability: { name } }: { ability: { name: string } }) => (
+              <li key={name}>{name}</li>
+            )
+          )}
+        </ul>
+      </div>
     </main>
   )
 }

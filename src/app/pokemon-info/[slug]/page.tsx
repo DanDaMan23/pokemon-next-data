@@ -24,6 +24,7 @@ export default async function Page({ params: { slug } }: PageProps) {
   return (
     <main className='pokemon-info-page'>
       <div className='container'>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={sprites.front_default} alt={name} />
         <h1 className='pokemon-name'>{name}</h1>
 

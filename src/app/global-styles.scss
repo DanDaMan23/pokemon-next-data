@@ -14,6 +14,12 @@ body {
       color: $pokemon-yellow;
       font-size: 3rem;
     }
+
+    .pokemon-home-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
   }
 
   main {

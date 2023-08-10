@@ -1,4 +1,7 @@
+"use client"
+
 import type { Metadata } from "next"
+import { useRouter } from "next/navigation"
 
 import "./global-styles.scss"
 
@@ -12,11 +15,19 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const { replace } = useRouter()
+
   return (
     <html lang='en'>
       <body>
         <div className='header'>
-          <h1>Pokemon</h1>
+          <button
+            type='button'
+            className='pokemon-home-button'
+            onClick={() => replace("/")}
+          >
+            <h1>Pokemon</h1>
+          </button>
         </div>
         {children}
       </body>

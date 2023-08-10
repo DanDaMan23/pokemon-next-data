@@ -1,0 +1,39 @@
+.pokemon-info-page {
+  display: flex;
+  justify-content: center;
+  text-transform: capitalize;
+
+  .container {
+    .pokemon-name {
+      margin: 1.5rem 0;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0.9rem 0;
+      padding: 0;
+
+      li {
+        border: 1px solid black;
+        border-radius: 10px;
+      }
+    }
+
+    .pokemon-types {
+      display: flex;
+      flex-direction: row;
+
+      li {
+        margin: 0.2rem;
+        padding: 0.5rem;
+      }
+    }
+
+    .pokemon-abilities {
+      li {
+        margin: 0.5rem 0.5rem 0.5rem 0;
+        padding: 0.5rem;
+      }
+    }
+  }
+}

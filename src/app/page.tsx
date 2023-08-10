@@ -1,5 +1,6 @@
 import PokemonSection from "./pokemon-section/pokemon-section"
 import "./app.scss"
+import Link from "next/link"
 
 async function getData() {
   const res = await fetch("https://pokeapi.co/api/v2/pokemon")
@@ -17,7 +18,9 @@ export default async function Home() {
   return (
     <main className='app'>
       {results.map(({ url, name }: { url: string; name: string }) => (
-        <PokemonSection key={name} link={url} name={name} />
+        <Link key={name} href={`/pokemon-info/${name}`}>
+          <PokemonSection link={url} name={name} />
+        </Link>
       ))}
     </main>
   )

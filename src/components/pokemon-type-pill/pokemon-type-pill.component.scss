@@ -1,0 +1,40 @@
+@use "../../styles/color-variables.scss" as *;
+
+.pokemon-type-pill {
+  --normal-type: #a8a77a;
+  --fire-type: #ee8130;
+  --water-type: #6390f0;
+  --electric-type: #f7d02c;
+  --grass-type: #7ac74c;
+  --ice-type: #96d9d6;
+  --fighting-type: #c22e28;
+  --poison-type: #a33ea1;
+  --ground-type: #e2bf65;
+  --flying-type: #a98ff3;
+  --psychic-type: #f95587;
+  --bug-type: #a6b91a;
+  --rock-type: #b6a136;
+  --ghost-type: #735797;
+  --dragon-type: #6f35fc;
+  --dark-type: #705746;
+  --steel-type: #b7b7ce;
+  --fairy-type: #d685ad;
+
+  margin: 0.2rem;
+  padding: 0.5rem;
+
+  border: 1px solid black;
+  border-radius: 20px;
+  min-width: 6rem;
+  max-width: 10rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    color: black;
+    text-transform: capitalize;
+    font-weight: bolder;
+  }
+}

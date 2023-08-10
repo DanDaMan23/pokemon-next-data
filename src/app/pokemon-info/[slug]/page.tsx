@@ -19,13 +19,16 @@ export default async function Page({ params: { slug } }: PageProps) {
     `https://pokeapi.co/api/v2/pokemon/${slug}`,
     `${slug} does not exists`
   )
-  console.log(abilities)
 
   return (
     <main className='pokemon-info-page'>
       <div className='container'>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={sprites.front_default} alt={name} />
+        {/* Soon to be a carousel */}
+        <div className='image-container'>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={sprites.front_default} alt={name} />
+        </div>
+
         <h1 className='pokemon-name'>{name}</h1>
 
         <h3>Types</h3>

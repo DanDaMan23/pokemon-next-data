@@ -1,3 +1,4 @@
+import PokemonTypePill from "@/components/pokemon-type-pill/pokemon-type-pill.component"
 import "./pokemon-info-page.scss"
 
 interface PageProps {
@@ -34,7 +35,9 @@ export default async function Page({ params: { slug } }: PageProps) {
         <h3>Types</h3>
         <ul className='pokemon-types'>
           {types.map(({ type: { name } }: { type: { name: string } }) => (
-            <li key={name}>{name}</li>
+            <li key={name}>
+              <PokemonTypePill key={name} type={name} />
+            </li>
           ))}
         </ul>
 

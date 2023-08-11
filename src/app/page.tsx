@@ -1,19 +1,11 @@
 import PokemonSection from "./pokemon-section/pokemon-section"
 import "./app.scss"
 import Link from "next/link"
+import { getInitialPokemonList } from "./actions"
 
-async function getData() {
-  const res = await fetch("https://pokeapi.co/api/v2/pokemon")
-
-  if (!res.ok) {
-    throw new Error("Pokemon API Failed")
-  }
-
-  return res.json()
-}
 
 export default async function Home() {
-  const { results, next } = await getData()
+  const { results, next } = await getInitialPokemonList()
 
   return (
     <main className='app'>

@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation"
 import "./global-styles.scss"
 import PokemonSearch from "./features/pokemon-search"
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: "Pokemon App",
   description: "Created with Next.js"
 }

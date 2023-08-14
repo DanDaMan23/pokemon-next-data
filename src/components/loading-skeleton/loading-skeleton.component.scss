@@ -1,0 +1,26 @@
+@use "../../styles/color-variables.scss" as *;
+
+.loading-skeleton {
+  opacity: 0.4;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+
+  .spinner {
+    background: none;
+    animation: spin 0.5s linear infinite;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

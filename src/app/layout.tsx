@@ -4,6 +4,7 @@ import type { Metadata } from "next"
 import { useRouter } from "next/navigation"
 
 import "./global-styles.scss"
+import PokemonSearch from "./features/pokemon-search"
 
 export const metadata: Metadata = {
   title: "Pokemon App",
@@ -29,6 +30,7 @@ export default function RootLayout({
             <h1>Pokemon</h1>
           </button>
         </div>
+        <PokemonSearch />
         {children}
       </body>
     </html>

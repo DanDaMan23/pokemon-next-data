@@ -1,7 +1,7 @@
 "use client"
 
-import "./pokemon-search.scss"
 import usePokemonSearch from "./use-pokemon-serach"
+import "./pokemon-search.scss"
 
 export default function PokemonSearch() {
   const {
@@ -15,9 +15,16 @@ export default function PokemonSearch() {
   return (
     <div className='pokemon-search'>
       <form onSubmit={onSubmit}>
-        <input {...register("pokemonName")} />
-        {errors.pokemonName && <p>{errors.pokemonName.message}</p>}
-        <input type='submit' />
+        <div className='input-area'>
+          <input
+            {...register("pokemonName")}
+            placeholder='Enter Pokemon Name'
+          />
+          {errors.pokemonName && <p className="error-message">{errors.pokemonName.message}</p>}
+        </div>
+        <div className='button-area'>
+          <input type='submit' />
+        </div>
       </form>
     </div>
   )

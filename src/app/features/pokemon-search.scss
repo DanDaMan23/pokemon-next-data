@@ -1,3 +1,33 @@
+@use "../../styles/color-variables.scss" as *;
+
 .pokemon-search {
   margin: 1rem;
+
+  form {
+    display: flex;
+    justify-content: center;
+
+    .input-area,
+    .button-area {
+      margin: 0.4rem;
+    }
+
+    .error-message {
+      margin: 0.5rem;
+      color: $pokemon-red;
+    }
+
+    input {
+      padding: 0.5rem;
+      border: 3px solid $pokemon-blue;
+      border-radius: 15px;
+    }
+
+    input[type="submit"] {
+      background-color: $pokemon-red;
+      color: $pokemon-yellow;
+      font-weight: bolder;
+      cursor: pointer;
+    }
+  }
 }

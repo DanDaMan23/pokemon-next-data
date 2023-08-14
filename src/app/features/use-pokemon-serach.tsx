@@ -21,7 +21,8 @@ export default function usePokemonSearch() {
 
   const onSubmit = pokemonFormHandler.handleSubmit(
     ({ pokemonName }: PokemonData) => {
-      push(`/pokemon-info/${pokemonName}`)
+      push(`/pokemon-info/${pokemonName.toLowerCase()}`)
+      pokemonFormHandler.reset()
     }
   )
 
